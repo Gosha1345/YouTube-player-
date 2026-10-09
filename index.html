@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Player</title>
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Видеоплеер -->
+  <div class="video-container" id="videoContainer">
+    <div class="video-placeholder" id="placeholder">
+      Вставь ссылку на YouTube, чтобы добавить видео
+    </div>
+  </div>
+
+  <main class="container">
+
+    <!-- Добавление видео -->
+    <form class="input-container" id="videoForm">
+      <input
+        type="url"
+        id="videoUrl"
+        placeholder="Вставь ссылку на YouTube..."
+        autocomplete="url"
+        required
+      >
+      <button type="submit">Добавить</button>
+    </form>
+
+    <div
+      id="errorMessage"
+      style="display:none; color:#ff7777; font-size:13px; margin:10px 2px;"
+      role="status"
+    ></div>
+
+    <!-- Плейлист -->
+    <section class="playlist">
+      <h2 class="playlist-title">Мои видео</h2>
+      <div id="videoList">
+        <div class="empty-message" id="emptyMessage">
+          Здесь пока нет видео
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
